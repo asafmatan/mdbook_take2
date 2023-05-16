@@ -17,6 +17,8 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v2
+        with:
+          cleanup: false
 
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v1
