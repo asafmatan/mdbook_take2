@@ -40,13 +40,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./book
           
-      - name: Generate PDF
-        uses: dante-ev/latex-action@latest
-        with:
-          root_file: book.tex  # Set the main .tex file
-
-      - name: Upload PDF
-        uses: actions/upload-artifact@v2
-        with:
-          name: book.pdf
-          path: book.pdf
