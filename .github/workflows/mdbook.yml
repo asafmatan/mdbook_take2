@@ -43,7 +43,6 @@ jobs:
       - name: Generate PDF
         uses: dante-ev/latex-action@latest
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           root_file: book.tex  # Set the main .tex file
 
       - name: Upload PDF
