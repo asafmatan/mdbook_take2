@@ -41,10 +41,10 @@ jobs:
           publish_dir: ./book
           
       - name: Generate PDF
-        uses: pascalgn/latex-template-action@v1
+        uses: dante-ev/latex-action@latest
         with:
-          main: book.tex  # Set the main .tex file
-          args: -pdf -interaction=nonstopmode -halt-on-error  # pdflatex options
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          root_file: book.tex  # Set the main .tex file
 
       - name: Upload PDF
         uses: actions/upload-artifact@v2
